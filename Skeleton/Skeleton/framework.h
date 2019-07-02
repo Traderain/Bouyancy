@@ -105,7 +105,7 @@ struct mat4 { // row-major matrix 4x4
 //---------------------------
 	float m[4][4];
 public:
-	mat4() {}
+	mat4() { }
 	mat4(float m00, float m01, float m02, float m03,
 		float m10, float m11, float m12, float m13,
 		float m20, float m21, float m22, float m23,
@@ -242,7 +242,7 @@ class GPUProgram {
 			char * log = new char[logLen];
 			glGetShaderInfoLog(handle, logLen, &written, log);
 			printf("Shader log:\n%s", log);
-			delete log;
+			delete[] log;
 		}
 	}
 	void checkShader(unsigned int shader, char * message) { 	// check if shader could be compiled
