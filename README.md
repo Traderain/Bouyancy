@@ -10,3 +10,5 @@ C++ is fun
 ## Running the project
 
 - Simply start the project with visual studio 2019
+
+yes
